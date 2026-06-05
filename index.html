@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duel Maze</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main>
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">8-level local maze race</p>
+          <h1>Duel Maze</h1>
+        </div>
+        <div class="actions">
+          <button id="soloBtn" type="button" title="Solo play">1P</button>
+          <button id="duelBtn" class="selected" type="button" title="Two-player race">2P</button>
+          <button id="hintBtn" type="button" title="Show hint">Hint</button>
+          <button id="resetBtn" type="button" title="Restart stage">Reset</button>
+        </div>
+      </header>
+
+      <nav id="levels" class="levels" aria-label="levels"></nav>
+
+      <section class="status">
+        <div>
+          <span id="stageLabel">Stage 1</span>
+          <strong id="sizeLabel">11 x 11</strong>
+        </div>
+        <div>
+          <span id="hintLabel">Hint hidden</span>
+          <strong id="modeLabel">2P race</strong>
+        </div>
+      </section>
+
+      <div id="boards" class="boards duel"></div>
+
+      <section class="controls">
+        <div><strong>1P</strong><span>W A S D</span></div>
+        <div><strong>2P</strong><span>Arrow keys</span></div>
+      </section>
+    </main>
+
+    <div id="victory" class="victory hidden" role="dialog" aria-modal="true">
+      <div>
+        <p id="victoryText">Victory!</p>
+        <div class="victory-actions">
+          <button id="replayBtn" type="button">Replay</button>
+          <button id="nextBtn" type="button">Next Stage</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./src/app.js"></script>
+  </body>
+</html>
